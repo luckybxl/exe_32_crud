@@ -6,6 +6,7 @@
 </head>
 <body>
 <h1>Admin du site</h1>
+<<<<<<< HEAD
 <div id="menu">
     <a href="./">Retour sur l'accueil</a>
 </div>
@@ -16,6 +17,15 @@
     <?php
 
 
+=======
+<div id="menu"><a href="./">Back home</a></div>
+
+<div id="contenu">
+        <ul>
+            <li><a href="?admin&ajout">Ajouter une news</a></li>
+        </ul>
+    <?php
+>>>>>>> 49abb54f14e2567a6c7c4680aea9138f0940eb9a
     // pas d'articles
     if ($articles == false) {
         echo "<h2>Pas encore d'articles!</h2>";

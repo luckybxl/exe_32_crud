@@ -3,10 +3,16 @@
 
 ### Principe:
 
+<<<<<<< HEAD
 #### Création d'une interface d'administration de 'arti'
 Avec son contrôleur, ses modèles et ses vues
 
 ! Pour le moment cette administration est publique
+=======
+#### Création d'une interface d'administration de 'arti' 
+Avec son contrôleur, ses modèles et ses vues
+! Pour le moment, cette admin est publique
+>>>>>>> 49abb54f14e2567a6c7c4680aea9138f0940eb9a
 
 #### Affichez sur la page d'accueil 
 tous les résumés d'articles ('exe_32.arti') avec leur 'titre', un 'texte' de 150 caractères avec 'lire la suite' ayant un lien envoyant vers '?article=idarti', suivit de la date de publication 'publie', le tout classé par 'publie' DESC

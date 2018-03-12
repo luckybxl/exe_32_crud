@@ -9,7 +9,6 @@ require_once "mysqliconfig.php";
 // appel du modèle contenant une connexion mysql nécessaire à toutes les pages => $mysqli
 require_once "modeles/mysqliconnect.php";
 
-
 if(empty($_GET)){
     require_once "controller/AccueilController.php";
 
@@ -18,7 +17,10 @@ if(empty($_GET)){
 }elseif (isset($_GET['article'])){
     require_once "controller/ArticleController.php";
 
+<<<<<<< HEAD
 // si on est dans l'administration
+=======
+>>>>>>> 49abb54f14e2567a6c7c4680aea9138f0940eb9a
 }elseif (isset($_GET['admin'])){
     require_once "controller/AdminController.php";
 
