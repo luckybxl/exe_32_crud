@@ -6,20 +6,26 @@
 </head>
 <body>
 <h1>Admin du site</h1>
-<div id="contenu">
-    <h2><?= $article['titre'] ?></h2>
-    <p><button onclick="document.location='./'">BACK</button></p>
-    <?php
+<div id="menu"><a href="./">Back home</a></div>
 
+<div id="contenu">
+        <ul>
+            <li><a href="?admin&ajout">Ajouter une news</a></li>
+        </ul>
+    <?php
     // pas d'articles
-    if ($article == false) {
-        echo "<h2>Cet article n'existe plus</h2>";
+    if ($articles == false) {
+        echo "<h2>Pas encore d'articles!</h2>";
     } else {
-        ?>
-        <p><?= nl2br($article['texte']) ?></p>
-        <p><?= $article['publie'] ?></p>
-        <hr>
-        <?php
+        foreach ($articles AS $item) {
+            ?>
+            <h3><a href="?article=<?= $item['idarti'] ?>"><?= $item['titre'] ?></a></h3>
+            <!-- ici le foreach pour les categ -->
+            <p><?= $item['texte'] ?> ... <a href="?article=<?= $item['idarti'] ?>">Lire la suite</a></p>
+            <p><?= $item['publie'] ?></p>
+            <hr>
+            <?php
+        }
     }
     ?>
 </div>
