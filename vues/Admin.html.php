@@ -6,7 +6,6 @@
 </head>
 <body>
 <h1>Admin du site</h1>
-<<<<<<< HEAD
 <div id="menu">
     <a href="./">Retour sur l'accueil</a>
 </div>
@@ -15,17 +14,6 @@
             <li><a href="?admin&ajout">Ajouter un article</a></li>
         </ul>
     <?php
-
-
-=======
-<div id="menu"><a href="./">Back home</a></div>
-
-<div id="contenu">
-        <ul>
-            <li><a href="?admin&ajout">Ajouter une news</a></li>
-        </ul>
-    <?php
->>>>>>> 49abb54f14e2567a6c7c4680aea9138f0940eb9a
     // pas d'articles
     if ($articles == false) {
         echo "<h2>Pas encore d'articles!</h2>";
@@ -35,7 +23,7 @@
             <h3><a href="?article=<?= $item['idarti'] ?>"><?= $item['titre'] ?></a></h3>
             <!-- ici le foreach pour les categ -->
             <p><?= $item['texte'] ?> ... <a href="?article=<?= $item['idarti'] ?>">Lire la suite</a></p>
-            <p><?= $item['publie'] ?></p>
+            <p><?= $item['publie'] ?> <img width="16" height="16" src="vues/img/update.png" alt="Modifier l'article" onclick="document.location='?admin&modif=<?= $item['idarti'] ?>';"/> | <img width="16" height="16" src="vues/img/delete.png" alt="Modifier l'article" onclick="document.location='?admin&sup=<?= $item['idarti'] ?>';"/></p>
             <hr>
             <?php
         }
